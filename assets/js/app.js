@@ -14,44 +14,55 @@ $(document).ready(()=> {
 
 /*Mapa*/
 	function initMap() {
-		var uluru = {lat: -33.4262974, lng: -70.669858};
+		var stgo = {lat: -33.4262974, lng: -70.669858};
 		var map = new google.maps.Map(
 			document.getElementById('map'), {
 			zoom: 4,
-			center: uluru
+			center: stgo
 	});
 		var marker = new google.maps.Marker({
-			position: uluru,
+			position: stgo,
 			map: map
 		});
 	}
 
 /*Filtrar Restaurantes*/
 
-function filterRestaurant(id) {
-	if(id === 'mexico'){
+function filter(id) {
+	var filt = $('#selector').val();
+	$('#rest').val('');
+	if(id == 'mexico'){
+		$('#rest').hide();
 		$('#mexico').show();
 		$('#japon').hide();
 		$('#thai').hide();
 		$('#chile').hide();
-	}else if (id === 'japon'){
+	}
+	if(id == 'japon'){
+		$('#rest').hide();
 		$('#mexico').hide();
 		$('#japon').show();
 		$('#thai').hide();
 		$('#chile').hide();
-	}else if(id === 'thai'){
+	}
+	if(id == 'thai'){
+		$('#rest').hide();
 		$('#mexico').hide();
 		$('#japon').hide();
 		$('#thai').show();
 		$('#chile').hide();
-	}else if(id === 'chile'){
+	}
+	if(id == 'chile'){
+		$('#rest').hide();
 		$('#mexico').hide();
 		$('#japon').hide();
 		$('#thai').hide();
 		$('#chile').show();
 	}
-};
+}
 
-
-
-
+$('.comida').mouseover(()=> {
+	$('.overlay').show();
+}).mouseout(()=> {
+	$('.overlay').hide();
+});

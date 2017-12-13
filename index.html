@@ -54,93 +54,174 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-8 col-sm-8 col-md-8 col-lg-8">
-				<select class="form-control text-center">
-					<option value="0">Filtrar restaurantes<span class="glyphicon glyphicon-search" aria-hidden="true"></span></option>
-					<option type="button" value="Mexicana">Comida Mexicana</option>
-					<option type="button" value="Japonesa">Comida Japonesa</option>
-					<option type="button" value="Thai">Comida Thai</option>
-					<option type="button" value="Chilena">Comida Chilena</option>
+				<select id="selector" name="selector" class="form-control text-center" onChange="filter(this.value);">
+					<option value="rest">Filtrar restaurantes<span class="glyphicon glyphicon-search" aria-hidden="true"></span></option>
+					<option type="button" value="mexico">Comida Mexicana</option>
+					<option type="button" value="japon">Comida Japonesa</option>
+					<option type="button" value="thai">Comida Thai</option>
+					<option type="button" value="chile">Comida Chilena</option>
 				</select>
 			</div>
 		</div>
-		<!-- Comida Mexicana -->
-		<div id="mexico">
+		<!-- Restaurantes -->
+		<div id="rest">
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/mex1.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/mexican.jpg" alt="mexican">
+					<div class="overlay">
+						<h4>Comida Mexicana</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/mex2.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/japanese.jpg" alt="japanese">
+					<div class="overlay">
+						<h4>Comida Japonesa</h4>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/mex3.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/thailand.jpg" alt="thailand">
+					<div class="overlay">
+						<h4>Comida Thai</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/mex4.jpeg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/chilean.jpg" alt="chilean">
+					<div class="overlay">
+						<h4>Comida Chilena</h4>
+					</div>
+				</div>
+			</div><!-- row -->
+		</div><!-- fin container rest -->
+
+		<!-- Comida Mexicana -->
+		<div id="mexico" style="display: none">
+			<div class="row">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/mex1.jpg" alt="mex1">
+					<div class="overlay">
+						<h4>Tacos</h4>
+					</div>
+				</div>
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/mex2.jpg" alt="mex2">
+					<div class="overlay">
+						<h4>Fajitas</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/mex3.jpg" alt="mex3">
+					<div class="overlay">
+						<h4>Guacamole</h4>
+					</div>
+				</div>
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/mex4.jpeg" alt="mex4">
+					<div class="overlay">
+						<h4>Tamales</h4>
+					</div>
 				</div>
 			</div><!-- row -->
 		</div><!-- fin container mexico -->
 	<!-- Comida Japonesa -->
 		<div id="japon" style="display: none">
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/jap1.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/jap1.jpg" alt="jap1">
+					<div class="overlay">
+						<h4>Pasteles Gato</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/jap2.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/jap2.jpg" alt="jap2">
+					<div class="overlay">
+						<h4>Sushi</h4>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/jap3.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/jap3.jpg" alt="jap3">
+					<div class="overlay">
+						<h4>Ramen</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/jap4.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/jap4.jpg" alt="jap4">
+					<div class="overlay">
+						<h4>Gyoza</h4>
+					</div>
 				</div>
 			</div><!-- row -->
 		</div><!-- fin container japon -->
 	<!-- Comida Thai -->
 		<div id="thai" style="display: none">
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/thai1.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/thai1.jpg" alt="thai1">
+					<div class="overlay">
+						<h4>Pad Thai</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/thai2.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/thai2.jpg" alt="thai2">
+					<div class="overlay">
+						<h4>Comida thai1</h4>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/thai3.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/thai3.jpg" alt="thai3">
+					<div class="overlay">
+						<h4>Comida thai2</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/thai4.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/thai4.jpg" alt="thai4">
+					<div class="overlay">
+						<h4>Comida thai3</h4>
+					</div>
 				</div>
 			</div><!-- row -->
 		</div><!-- fin container thai-->
 	<!-- Comida Chilena-->
 		<div id="chile" style="display: none">
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/chile1.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/chile1.jpg" alt="chile1">
+					<div class="overlay">
+						<h4>Pastel de Choclo</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/chile2.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/chile2.jpg" alt="chile2">
+					<div class="overlay">
+						<h4>Cazuela</h4>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/chile3.jpg" alt="">
+				<div class="over col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/chile3.jpg" alt="chile3">
+					<div class="overlay">
+						<h4>Empanadas</h4>
+					</div>
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img class="img-food" src="assets/img/chile4.jpg" alt="">
+				<div class="over col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img class="img-food" src="assets/img/chile4.jpg" alt="chile4">
+					<div class="overlay">
+						<h4>Anticuchos Vegetarianos</h4>
+					</div>
 				</div>
 			</div><!-- row -->
 		</div><!-- fin container chile -->
+
 	</div> <!-- container content2 -->
-	
+
 
 <!-- Script -->
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6zxfe5o7nXMBxNJpc0gaymWV4eu96j_E-&callback=initMap"></script>

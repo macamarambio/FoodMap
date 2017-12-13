@@ -84,3 +84,16 @@ body{
 	width: 100%;
 	height: 8em;
 }
+
+.overlay {
+	width: 100%;
+	height: 8em;
+	background-color: #2B2B2B;
+	color: #D47F31;
+	text-align: center;
+	z-index: 100;
+	opacity: 0.5;
+	position: fixed;
+	top: 0.5em;
+	display:none;
+}
