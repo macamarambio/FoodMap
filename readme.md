@@ -20,7 +20,5 @@
 
 
 
- + Macarena Marambio
-
 #### FoodMap Laboratoria versión `0.0.1` 
 
