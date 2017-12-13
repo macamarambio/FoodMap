@@ -14,6 +14,8 @@
 
 + Filtro restaurant según tipo de comida.
 
++ Hover y tooltip en todas las imagenes.
+
 + Modal en vista principal, en 4 restaurantes
 
 
