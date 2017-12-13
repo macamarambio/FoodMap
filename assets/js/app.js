@@ -61,8 +61,12 @@ function filter(id) {
 	}
 }
 
-$('.comida').mouseover(()=> {
-	$('.overlay').show();
-}).mouseout(()=> {
-	$('.overlay').hide();
-});
+$('[data-toggle="tooltip"]').tooltip();
+
+$('.img-food').mouseover(over);
+
+function over(){
+	var nombre = $(this).index() + 1;
+	console.log(nombre);
+}
+
