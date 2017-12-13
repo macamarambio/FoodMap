@@ -1,0 +1,86 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #2B2B2B;
+	overflow: hidden;
+}
+/*Vista splash*/
+
+.content{
+	color: #D47F31;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	padding-top: 40vh;
+}
+
+.content h1{
+	font-size: 4em;
+	margin-bottom: 20%;
+}
+
+/*Loading*/
+
+.osahanloading {
+	animation: 1.5s linear 0s normal none infinite running osahanloading;
+	background: #fed37f none repeat scroll 0 0;
+	border-radius: 50px;
+	height: 50px;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	position: absolute;
+	top: 50%;
+	width: 50px;
+}
+.osahanloading::after {
+	animation: 1.5s linear 0s normal none infinite running osahanloading_after;
+	border-color: #D47F31 transparent;
+	border-radius: 80px;
+	border-style: solid;
+	border-width: 10px;
+	content: "";
+	height: 80px;
+	left: -15px;
+	position: absolute;
+	top: -15px;
+	width: 80px;
+}
+@keyframes osahanloading {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		background: #D47F31 none repeat scroll 0 0;
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/*Contenido 1*/
+
+.content2{
+	margin-top: 2%;
+	padding: 0.5%;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: #D47F31;
+	position: relative;
+
+}
+
+#map{
+	height: 25vh;
+	width: 100%;
+}
+
+
+/*Filtrar Restaurant*/
+
+.img-food{
+	margin-top: 25%;
+	width: 100%;
+	height: 8em;
+}
