@@ -31,6 +31,13 @@ $(document).ready(()=> {
 function filter(id) {
 	var filt = $('#selector').val();
 	$('#rest').val('');
+	if(id == 'rest'){
+		$('#rest').show();
+		$('#mexico').hide();
+		$('#japon').hide();
+		$('#thai').hide();
+		$('#chile').hide();
+	}
 	if(id == 'mexico'){
 		$('#rest').hide();
 		$('#mexico').show();
@@ -63,10 +70,14 @@ function filter(id) {
 
 $('[data-toggle="tooltip"]').tooltip();
 
+
+
+/*
 $('.img-food').mouseover(over);
 
 function over(){
-	var nombre = $(this).index() + 1;
+	var nombre = $(this).index();
 	console.log(nombre);
 }
+*/
 
