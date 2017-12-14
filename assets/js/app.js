@@ -68,11 +68,19 @@ function filter(id) {
 	}
 }
 
+/*Hover img*/
 $('[data-toggle="tooltip"]').tooltip();
 
 
 
 /*
+$('.img-food').hover(()=> {
+	$(this).css('opacity', '0.5');
+}, function() {
+	$(this).css('opacity', '1');
+});
+
+
 $('.img-food').mouseover(over);
 
 function over(){
